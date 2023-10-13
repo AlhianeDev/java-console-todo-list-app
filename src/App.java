@@ -214,19 +214,19 @@ public class App {
 
         String todo_title = bufferedReader.readLine();
 
-        Todo targeted_todo = null;
+        int index = -1, counter = 0;
 
         for (Todo todo : linkedList) {
 
-            if (todo.getTitle() == todo_title)
+            if (todo.getTitle().equals(todo_title))
 
-                targeted_todo = todo;
+                index = counter;
+
+            counter++;
 
         }
 
-        if (todo_title != null) {
-
-            int index = linkedList.indexOf(targeted_todo);
+        if (index != -1) {
 
             System.out.println(
 
